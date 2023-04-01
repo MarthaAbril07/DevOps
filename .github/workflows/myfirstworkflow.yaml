@@ -3,6 +3,7 @@ name: My cool Workflow
 on:
   #triggers if you not specific the branch, the workflows will put in all files
   push:
+  # if you specify the pull_request, when you do a pull request the workflow run
   pull_request:
   workflow_dispatch:
   
@@ -19,6 +20,23 @@ jobs:
                   touch newfile.yaml
                   echo "Please Alex is Friday let me scape" >> newfile.yaml
                   cat newfile.yaml
-                  pwd
-                  
+                  pwd              
+    secondjob:
+             #needs this jobs needs myfirstjob for run
+             needs: [myfirstjob]
+             name: Second job
+             runs-on: macos-lastest
+             steps: 
+             - name: Step one
+               run: date               
+    thirdjob:
+             name: Third job
+             runs-on: windows-lastest
+             steps: 
+             - name: Step one
+               run: date
+                 
+             
+             
+             
               
