@@ -1,0 +1,25 @@
+name: My cool Workflow
+#the indentation is based on:
+on:
+  #triggers if you not specific the branch, the workflows will put in all files
+  push:
+  pull_request:
+  workflow_dispatch:
+  
+jobs:
+    #jobs can start with _ or letter
+    myfirstjob:
+              name: First job
+              runs-on: ubuntu-latest
+              steps:
+              - name: Step One
+                uses: actions/checkout@v3
+              - name: Step Two
+              #| = run multiple commands in the same execution
+                 run: |
+                  touch newfile.yaml
+                  echo "Please Alex is Friday let me scape" >> newfile.yaml
+                  cat newfile.yaml
+                  pwd
+                  
+              
