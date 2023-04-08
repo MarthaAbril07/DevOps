@@ -1,0 +1,45 @@
+---
+- name: first ansible playbook
+  hosts: target1
+  become: yes
+  tasks:
+    - name: Challenge 1 - ping
+      ansible.builtin.ping: null
+    - name: Challenge 1 - create a directory if it does not exist
+      ansible.builtin.file:
+        path: /etc/nueva_carpeta_creada_con_ansible
+        state: directory
+        mode: "0755"
+- name: Challenge 2
+  hosts: target2
+  become: yes
+  tasks:
+    - name: Installing apache
+      ansible.builtin.apt:
+        name: apache2
+- name: Challenge 3
+  hosts: all
+  become: yes
+  tasks:
+    - name: Installing packages with a loop
+      package:
+        name: "{{item}}"
+        state: present
+      loop:
+        - jq
+        - vim
+        - python3
+- name: Challenge 4 - vars
+  hosts: all
+  become: yes
+  tasks:
+    - name: Get var of a file
+      ansible.builtin.include_vars:
+        dir: vars
+        name: variables
+    - name: Installing package with variables of a file
+      package:
+        name: "{{ item }}"
+        state: present
+      loop:
+         - "{{ variables.packages }}"

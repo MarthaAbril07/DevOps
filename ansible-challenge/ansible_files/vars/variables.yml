@@ -1,0 +1,7 @@
+---
+packages:
+  - jq
+  - vim
+  - python3
+username: ansible_controller
+password: 12345
