@@ -15,5 +15,9 @@ jobs:
         - uses: actions/checkout@v1
         - name: Cambiando de directorio
           run: cd capstone_project/hello-world/
-        - name: Running tests
-          run: npm install && npm test && docker compose up
+        - name: Ruta actual
+          run: pwd
+        - name: Instalando dependencias
+          run: npm install
+        - name: Corriendo los tests
+          run: npm test && docker compose up
