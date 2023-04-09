@@ -13,11 +13,9 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - name: Verificar ruta y contenido
-          run: |
-               pwd
-               ls -l capstone-project/hello-world
+          run:  pwd
         - name: Prueba carpeta
-          run: cd DevOps
+          run: ls
         - name: Imprimir directorio actual1
           run: pwd
         - name: Running tests
