@@ -15,9 +15,10 @@ jobs:
         - uses: actions/checkout@v1
         - name: Accediendo al proyecto 
           run: cd capstone_project/hello-world/
-        - name: Instalando dependencias
+        - name: Corriendo test
           working-directory: capstone_project/hello-world/
-          run: npm install
-        - name: Corriendo test and  If tests are success, building the container
+          run: npm test
+          if: ${{ success() }}
+        - name: Building the container
           working-directory: capstone_project/hello-world/
-          run: npm test && docker compose up
+          run: docker compose up
