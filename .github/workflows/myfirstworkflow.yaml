@@ -21,20 +21,20 @@ jobs:
                   echo "Please Alex is Friday let me scape" >> ${{ secrets.MY_SECRET }}.yaml
                   cat ${{ secrets.MY_SECRET }}.yaml
                   pwd              
-    secondjob:
+   # secondjob:
              #needs this jobs needs myfirstjob for run
-             needs: [myfirstjob]
-             name: Second job
-             runs-on: macos-lastest
-             steps: 
-             - name: Step one
-               run: date               
-    thirdjob:
-             name: Third job
-             runs-on: windows-lastest
-             steps: 
-             - name: Step one
-               run: date
+    #         needs: [myfirstjob]
+     #        name: Second job
+      #       runs-on: macos-lastest
+        #     steps: 
+       #      - name: Step one
+         #      run: date               
+    #thirdjob:
+     #        name: Third job
+     #        runs-on: windows-lastest
+      #       steps: 
+       #      - name: Step one
+        #       run: date
                  
              
              
