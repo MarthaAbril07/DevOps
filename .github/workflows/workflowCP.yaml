@@ -13,11 +13,5 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - uses: actions/checkout@v1
-        - name: Ruta actual
-          run: ls
-        - name: Cambiando de directorio
-          run: cd capstone_project/hello-world/ && npm install
-        - name: Ruta actual2
-          run: pwd
-        - name: Corriendo los tests
-          run: npm test && docker compose up
+        - name: If tests are success, building the container
+          run: cd capstone_project/hello-world/ && npm install && npm test && docker compose up
