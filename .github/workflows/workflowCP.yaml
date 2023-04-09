@@ -15,6 +15,9 @@ jobs:
         - uses: actions/checkout@v1
         - name: Accediendo al proyecto 
           run: cd capstone_project/hello-world/
+        - name: Instalando dependencias
+          working-directory: capstone_project/hello-world/
+          run: npm install
         - name: Corriendo test
           working-directory: capstone_project/hello-world/
           run: npm test
