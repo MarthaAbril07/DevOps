@@ -13,5 +13,11 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - uses: actions/checkout@v1
-        - name: If tests are success, building the container
-          run: cd capstone_project/hello-world/ && npm install && npm test && docker compose up
+        - name: Accediendo al proyecto 
+          run: cd capstone_project/hello-world/
+        - name: Instalando dependencias
+          working-directory: capstone_project/hello-world/
+          run: npm install
+        - name: Corriendo test and  If tests are success, building the container
+          working-directory: capstone_project/hello-world/
+          run: npm test && docker compose up
