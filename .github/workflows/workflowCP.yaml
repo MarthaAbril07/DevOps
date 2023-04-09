@@ -16,7 +16,7 @@ jobs:
         - name: Cambiando de directorio
           run: cd capstone_project/hello-world/
         - name: Ruta actual
-          run: pwd
+          run: ls
         - name: Instalando dependencias
           run: npm install
         - name: Corriendo los tests
