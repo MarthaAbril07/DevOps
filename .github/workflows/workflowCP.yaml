@@ -12,5 +12,7 @@ jobs:
        name: Pipeline for capstone project
        runs-on: ubuntu-latest
        steps:
+       - name: Accediendo a la carpeta
+         run: cd capstone_project/hello-world
        - name: Running tests
          run: npm install && npm test && docker compose up
