@@ -12,8 +12,10 @@ jobs:
        name: Pipeline for capstone project
        runs-on: ubuntu-latest
        steps:
+        - name: Dar permisos de ejecución al script
+          run: chmod +x capstone_project/hello-world
         - name: Prueba carpeta
-          run: DevOps/capstone_project/hello-world
+          run: capstone_project/hello-world
         - name: Imprimir directorio actual1
           run: pwd
         - name: Running tests
