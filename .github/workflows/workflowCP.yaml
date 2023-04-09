@@ -2,11 +2,11 @@
 name: Pipeline for capstone project
 on:
   push:
-    paths:
-      - 'capstone_project/hello-world/**'
+    branches:
+      - testworkflows
   pull_request:
-      paths:
-      - 'capstone_project/hello-world/**'
+      branches:
+      - testworkflows
 jobs:
     firstjob:
        name: Pipeline for capstone project
