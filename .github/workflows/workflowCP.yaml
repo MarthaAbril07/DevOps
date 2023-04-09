@@ -13,11 +13,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - uses: actions/checkout@v1
-        - name: uno
-          run:  pwd
-        - name: Imprimir directorio actual1
-          run: pwd
         - name: Cambiando de directorio
           run: cd capstone_project/hello-world/
-     #  - name: Running tests
-      #    run: npm install && npm test && docker compose up
+        - name: Running tests
+          run: npm install && npm test && docker compose up
