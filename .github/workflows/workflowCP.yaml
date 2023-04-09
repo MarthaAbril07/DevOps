@@ -13,7 +13,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - name: Prueba carpeta
-          run: capstone_project/hello-world/workflowCP.yaml
+          run: capstone_project/hello-world
         - name: Imprimir directorio actual1
           run: pwd
         - name: Running tests
