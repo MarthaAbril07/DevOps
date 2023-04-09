@@ -25,7 +25,7 @@ jobs:
         - name: Building the container
           working-directory: capstone_project/hello-world/
           run: docker compose up
-        - name: Wait for service to start
+        - name: Wait for service to start...
           with:
             host: localhost
             port: 3000
