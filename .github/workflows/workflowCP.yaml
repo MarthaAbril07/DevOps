@@ -12,9 +12,5 @@ jobs:
        name: Pipeline for capstone project
        runs-on: ubuntu-latest
        steps:
-       - name: Imprimir directorio actual
-         run: pwd
-       - name: Accediendo a la carpeta
-         run: cd capstone_project
        - name: Running tests
          run: npm install && npm test && docker compose up
