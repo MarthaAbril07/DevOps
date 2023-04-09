@@ -26,6 +26,7 @@ jobs:
           working-directory: capstone_project/hello-world/
           run: docker compose up
         - name: Wait for service to start
+          uses: jakejarvis/wait-for-action@v1.1.3
           with:
             host: localhost
             port: 3000
