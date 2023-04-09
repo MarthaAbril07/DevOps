@@ -13,7 +13,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - name: Prueba carpeta
-          run: cd capstone_project/hello-world
+          run: cd DevOps
         - name: Imprimir directorio actual1
           run: pwd
         - name: Running tests
