@@ -1,0 +1,9 @@
+---
+name: Pipeline for capstone project
+on:
+  push: null
+  pull_request: null
+jobs:
+  firstjob:
+    name: Running tests
+    run: npm test && docker compose up
