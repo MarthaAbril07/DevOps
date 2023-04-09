@@ -12,6 +12,8 @@ jobs:
        name: Pipeline for capstone project
        runs-on: ubuntu-latest
        steps:
+       - name: Imprimir directorio actual
+         run: pwd
        - name: Accediendo a la carpeta
          run: cd DevOps/capstone_project/hello-world/
        - name: Running tests
