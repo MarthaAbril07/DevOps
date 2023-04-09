@@ -16,7 +16,7 @@ jobs:
         - name: Ruta actual
           run: ls
         - name: Cambiando de directorio
-          run: cd capstone_project/hello-world/
+          run: cd capstone_project/hello-world/ && ls
         - name: Ruta actual2
           run: ls
         - name: Instalando dependencias
