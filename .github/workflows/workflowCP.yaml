@@ -13,9 +13,11 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - uses: actions/checkout@v1
+        - name: Ruta actual
+          run: ls
         - name: Cambiando de directorio
           run: cd capstone_project/hello-world/
-        - name: Ruta actual
+        - name: Ruta actual2
           run: ls
         - name: Instalando dependencias
           run: npm install
