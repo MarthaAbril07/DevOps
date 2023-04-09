@@ -1,11 +1,12 @@
 name: My cool Workflow
 #the indentation is based on:
 on:
-  #triggers if you not specific the branch, the workflows will put in all files
   push:
-  # if you specify the pull_request, when you do a pull request the workflow run
+    branches:
+      - main
   pull_request:
-  workflow_dispatch:
+      branches:
+      - main
   
 jobs:
     #jobs can start with _ or letter
