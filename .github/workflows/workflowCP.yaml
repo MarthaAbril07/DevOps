@@ -21,7 +21,7 @@ jobs:
         - name: Regresando original
           working-directory: capstone_project/hello-world/src
           run: |
-               sed -i 's/Hello DevOps!/Hello World!/g' texto.txt
+               sed -i 's/Hello DevOps!/Hello World!/g' App.js
         - name: Corriendo test
           working-directory: capstone_project/hello-world/
           run: npm test
