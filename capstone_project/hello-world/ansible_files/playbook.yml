@@ -1,6 +1,6 @@
 ---
 - name: first ansible playbook
-  hosts: target1
+  hosts: capstone_project_A
   become: yes
   tasks:
     - name: Challenge 1 - ping
