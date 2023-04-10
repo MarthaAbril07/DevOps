@@ -4,11 +4,11 @@ services:
     build: 
       context: ./ansible_base
       dockerfile: Dockerfile
-    container_name: ansible_controller
+    container_name: ansible_controller_project
     volumes:
       - type: bind
         source: ./ansible_files
-        target: /home/ansible_controller/ansible_files
+        target: /home/ansible_controller_project/ansible_files
   target1:
     build: 
       context: ./ansible_base
