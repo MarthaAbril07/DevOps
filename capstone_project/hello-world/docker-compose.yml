@@ -9,8 +9,8 @@ services:
       - type: bind
         source: ./ansible_files
         target: /home/ansible_controller_project/ansible_files
-  target1:
+  ansible_capstone_project_A:
     build: 
       context: ./ansible_base
       dockerfile: Dockerfile
-    container_name: ansible_target1
+    container_name: ansible_capstone_project_A
