@@ -1,5 +1,5 @@
 ---
-name: Pipeline for capstone project
+name: Pipeline for capstone project abril
 on:
   push:
     branches:
@@ -13,16 +13,16 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - uses: actions/checkout@v1
-        - name: Accediendo al proyecto 
+        - name: Accessing the hello_world project 
           run: cd capstone_project/hello-world/
-        - name: Instalando dependencias
+        - name: installing dependencies
           working-directory: capstone_project/hello-world/
           run: npm install
-        - name: Regresando original
+        - name: Returning to original text
           working-directory: capstone_project/hello-world/src
           run: |
                sed -i 's/Hello DevOps!/Hello World!/g' App.js
-        - name: Corriendo test
+        - name: Running test
           working-directory: capstone_project/hello-world/
           run: npm test
           if: ${{ success() }}
