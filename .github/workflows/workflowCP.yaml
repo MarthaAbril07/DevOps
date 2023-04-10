@@ -9,7 +9,7 @@ on:
       - testworkflows
 jobs:
     firstjob:
-       name: Pipeline for capstone project
+       name: Pipeline for capstone project abril
        runs-on: ubuntu-latest
        steps:
         - uses: actions/checkout@v1
@@ -18,6 +18,10 @@ jobs:
         - name: Instalando dependencias
           working-directory: capstone_project/hello-world/
           run: npm install
+        - name: Regresando original
+          working-directory: capstone_project/hello-world/src
+          run: |
+               sed -i 's/Hello DevOps!/Hello World!/g' texto.txt
         - name: Corriendo test
           working-directory: capstone_project/hello-world/
           run: npm test
