@@ -1,11 +1,11 @@
 ---
-- name: change text
+- name: Step 4 - change text
   hosts: localhost
   become: yes
   tasks:
-    - name: Step1
+    - name: Check connection
       ansible.builtin.ping: null
-    - name: Replace text
+    - name: Replace text in App.js
       ansible.builtin.replace:
         path: "src/App.js"
         regexp: 'Hello World!'
