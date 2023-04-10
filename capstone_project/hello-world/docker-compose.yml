@@ -1,10 +1,16 @@
-version: '1.0'
-
+version: "1.0"  
 services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
+  ansible:
+    build: 
+      context: ./ansible_base
+      dockerfile: Dockerfile
+    container_name: ansible_controller
     volumes:
-      - .:/app
-
+      - type: bind
+        source: ./ansible_files
+        target: /home/ansible_controller/ansible_files
+  target1:
+    build: 
+      context: ./ansible_base
+      dockerfile: Dockerfile
+    container_name: ansible_target1
