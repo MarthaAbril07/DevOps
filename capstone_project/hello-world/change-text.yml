@@ -1,0 +1,12 @@
+---
+- name: change text
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Step1
+      ansible.builtin.ping: null
+    - name: Replace text
+      ansible.builtin.replace:
+        path: "src/App.js"
+        regexp: 'Hello World!'
+        replace: 'Hello DevOps!'
